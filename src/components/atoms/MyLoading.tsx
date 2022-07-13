@@ -6,7 +6,7 @@ const MyLoading:React.FC<LoadingProps> = ({ type, shape, color }) => {
         <div>
             {// ----- spinner -----
             shape === 'spinner' &&
-            <div>
+            <div className=''>
                 <hr/><hr/><hr/><hr/>
             </div>
             }
@@ -14,14 +14,21 @@ const MyLoading:React.FC<LoadingProps> = ({ type, shape, color }) => {
             {// ----- circle -----
             shape === 'circle' &&
             <div>
-                
+                {/* normal circle loading */}
             </div>
             }
 
             {// ----- pips -----
             shape === 'pips' &&
             <div>
-                
+                {/* 3 or more vertical lines */}
+            </div>
+            }
+
+            {// ----- pips -----
+            shape === 'bar' &&
+            <div>
+                {/* logo + bar */}
             </div>
             }
         </div>

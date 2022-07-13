@@ -1,9 +1,10 @@
 import React from 'react'
+import MyLoading from './components/atoms/MyLoading'
 
 function App() {
   return (
     <div className="App">
-      this is app.tsx
+      <MyLoading type='button' shape='spinner'/>
     </div>
   )
 }
