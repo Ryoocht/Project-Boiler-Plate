@@ -3,11 +3,14 @@ import { LoadingProps } from '../../types/propTypes'
 
 const MyLoading:React.FC<LoadingProps> = ({ type, shape, color }) => {
     return (
-        <div>
+        <div className='relative'>
             {// ----- spinner -----
             shape === 'spinner' &&
-            <div className=''>
-                <hr/><hr/><hr/><hr/>
+            <div className='loading-spinner'>
+                <hr className='bg-red-400'/>
+                <hr className='bg-yellow-400'/>
+                <hr className='bg-blue-400'/>
+                <hr className='bg-purple-400'/>
             </div>
             }
 

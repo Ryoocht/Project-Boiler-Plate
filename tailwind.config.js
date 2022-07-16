@@ -34,6 +34,17 @@ module.exports = {
         borderRadius: {
           '4xl': '2rem',
         }
+      },
+      animation: {
+        'spinner': 'spin 2s ease infinite'
+      },
+      keyframes: {
+        'spin': {
+          '0%, 100%': { transform: 'translate(0)'},
+          '25%': { transform: 'translate(160%)'},
+          '50%': { transform: 'translate(160%, 160%)'},
+          '75%': { transform: 'translate(0, 160%)'},
+        }
       }
     },
   },
