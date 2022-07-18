@@ -2,9 +2,179 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .loading-spinner {
-        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28
-        animation-spinner;
+/* Spinner Style */
+.loading_spinner {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:100px;
+    height:100px;
+}
+
+.loading_spinner hr {
+    border:0;
+    margin:0;
+    width:40%;
+    height:40%;
+    position:absolute;
+    border-radius:50%;
+    animation:spin 2s ease infinite;
+}
+
+.loading_spinner :first-child {
+    background:#19A68C;
+    animation-delay:-1.5s;
+}
+
+.loading_spinner :nth-child(2) {
+    background: #F63D3A;
+    animation-delay: -1s;
+}
+
+.loading_spinner :nth-child(3) {
+    background: #FDA543;
+    animation-delay: -0.5s;
+}
+
+.loading_spinner :last-child {
+    background: #193B48;
+}
+
+@keyframes spin {
+    0%, 100% { transform: translate(0); }
+    25% { transform: translate(160%); }
+    50% { transform: translate(160%, 160%); }
+    75% { transform: translate(0, 160%); }
+}
+
+/* Circle Style */
+.main_circle{
+    left: 50% !important;
+    margin-left:-100px;
+    position: fixed !important;
+    top: 50% !important;
+    margin-top: -100px;
+    width: 45px;
+    z-index: 9000 !important;
+}
+
+.main_circle .circle_loader {
+  position: relative;
+  margin: 0px auto;
+  width: 200px;
+  height:200px;
+}
+.main_circle .circle_loader:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.circular_loader {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+
+.circular_loader_path {
+  stroke-dasharray: 150,200;
+  stroke-dashoffset: -10;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+
+@-webkit-keyframes color {
+  0% { stroke: #70c542; }
+  40% { stroke: #70c542; }
+  66% { stroke: #70c542; }
+  80%, 90% { stroke: #70c542; }
+}
+
+@keyframes color {
+  0% { stroke: #70c542; }
+  40% { stroke: #70c542; }
+  66% { stroke: #70c542; }
+  80%, 90% { stroke: #70c542; }
+}
+
+/* Pips Style */
+.pip_bar {
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    animation: scale-up 1s linear infinite;
+}
+
+.pip_bar :nth-child(2) {
+    height: 35px;
+    margin: 0 5px;
+    animation-delay: .25s;
+}
+
+.pip_bar :nth-child(3) {
+    animation-delay: .5s;
+}
+
+@keyframes scale-up {
+    20% {
+        background-color: #fff;
+        transform: scaleY(1.5);
     }
+    40% { transform: scaleY(1);}
 }
