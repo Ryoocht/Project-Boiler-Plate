@@ -1,10 +1,14 @@
 import React from 'react'
+import { SnackBarProps } from '../../types/propTypes'
+import { RFC } from '../../types/reactTypes'
 
-type Props = {}
-
-const MySnackbar = (props: Props) => {
+const MySnackbar:RFC<SnackBarProps> = ({ position, timeout }) => {
   return (
-    <div>MySnackbar</div>
+    <>
+    {
+
+    }
+    </>
   )
 }
 

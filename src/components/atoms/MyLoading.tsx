@@ -1,4 +1,3 @@
-import React from 'react'
 import '../../assets/styles/loading.css'
 import { LoadingProps } from '../../types/propTypes'
 import { RFC } from '../../types/reactTypes'
@@ -6,43 +5,57 @@ import { RFC } from '../../types/reactTypes'
 const MyLoading:RFC<LoadingProps> = ({ type, shape, color }) => {
     return (
         <div className='relative'>
-            {// ----- spinner -----
-            shape === 'spinner' &&
-            <div className='relative w-screen h-screen'>
-                <div className='loading_spinner'>
-                    <hr/><hr/><hr/><hr/>
-                </div>
-            </div>
-            }
-
-            {// ----- circle -----
+            {// ----- circle ----- //
             shape === 'circle' &&
-            <div className='relative h-full'>
-                <div className='main_circle'>
-                    <div className='circle_loader'>
-                        <svg className='circular_loader' viewBox="25 25 50 50" >
-                        <circle className='circular_loader_path' cx="50" cy="50" r="20" fill="none" stroke="#70c542" stroke-width="2" />
-                        </svg>
-                    </div>
-                </div>
+            <svg className='loading_circle' viewBox="25 25 50 50">
+                <circle cx="50" cy="50" r="20"></circle>
+            </svg>
+            }
+
+            {// ----- bars ----- //
+            shape === 'bars' &&
+            <div className='vertical_loading_bars'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             }
 
-            {// ----- pips -----
-            shape === 'pips' &&
-            <div className='relative'>
-                <div className='flex items-center'>
-                    <span className='pip_bar'></span>
-                    <span className='pip_bar'></span>
-                    <span className='pip_bar'></span>
-                </div>
+            {// ----- cradle ----- //
+            shape === 'cradle' &&
+            <div className='loading_cradle'>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
             }
 
-            {// ----- pips -----
-            shape === 'bar' &&
-            <div>
-                {/* logo + bar */}
+            {// ----- dots ----- //
+            shape === 'dots' &&
+            <div className='loading_dots'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            }
+
+            {// ----- spinner ----- //
+            shape === 'spinner' &&
+            <div className='loading_spinner'>
+                <hr/><hr/><hr/><hr/>
+            </div>
+            }
+
+            {// ----- wave ----- //
+            shape === 'wave' &&
+            <div className='loading_wave'>
+                <div className='wave_bars'></div>
+                <div className='wave_bars'></div>
+                <div className='wave_bars'></div>
+                <div className='wave_bars'></div>
+                <div className='wave_bars'></div>
+                <div className='wave_bars'></div>
             </div>
             }
         </div>
