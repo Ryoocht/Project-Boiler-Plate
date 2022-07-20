@@ -1,3 +1,5 @@
-import SampleIcon from './sample_icon.jpg'
+import { IoClose as CloseIcon } from 'react-icons/io5'
 
-export { SampleIcon}
+export {
+    CloseIcon,
+}

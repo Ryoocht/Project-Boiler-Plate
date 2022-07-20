@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .top_left {
+        @apply
+    }
+    .top_right {
+        @apply
+    }
+    .bottom_left {
+        @apply
+    }
+    .bottom_right {
+        @apply
+    }
+    .error {
+        @apply bg-red-400
+    }
+    .warning {
+        @apply bg-yellow-400
+    }
+    .info {
+        @apply bg-blue-400
+    }
+    .success {
+        @apply bg-green-400
+    }
+}
