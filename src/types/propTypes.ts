@@ -8,3 +8,7 @@ export type SnackBarProps = {
     position: 'top_left' | 'top_right' | 'bottom_left' | 'bottom_right'
     timeout: number
 }
+
+export type ChildrenProp = {
+    children: JSX.Element
+}

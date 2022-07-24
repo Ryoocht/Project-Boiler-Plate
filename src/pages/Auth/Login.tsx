@@ -1,10 +1,11 @@
 import React from 'react'
+import { RFC } from '../../types/reactTypes'
 
 type Props = {
 
 }
 
-const Login:React.FC<Props> = () => {
+const Login:RFC<Props> = () => {
     return (
         <div>Login</div>
     )

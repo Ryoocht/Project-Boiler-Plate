@@ -2,7 +2,7 @@
     visibility: hidden;
     position: fixed;
     display: flex;
-    width: 400px;
+    width: 90%;
     min-width: 250px;
     height: auto;
     border-radius: 10px;
@@ -94,5 +94,11 @@
     } to {
         left: 0; 
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .snackbar_container {
+        width: 90%
     }
 }

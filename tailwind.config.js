@@ -26,25 +26,12 @@ module.exports = {
         extrabold: 800,
         black: 900,
       },
-      extend: {
-        spacing: {
-          '8xl': '96rem',
-          '9xl': '128rem',
-        },
-        borderRadius: {
-          '4xl': '2rem',
-        }
+      spacing: {
+        '8xl': '96rem',
+        '9xl': '128rem',
       },
-      animation: {
-        'spinner': 'spin 2s ease infinite'
-      },
-      keyframes: {
-        'spin': {
-          '0%, 100%': { transform: 'translate(0)'},
-          '25%': { transform: 'translate(160%)'},
-          '50%': { transform: 'translate(160%, 160%)'},
-          '75%': { transform: 'translate(0, 160%)'},
-        }
+      borderRadius: {
+        '4xl': '2rem',
       }
     },
   },
